@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelvetDesires - Exotic Stories</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c0c5b; /* Deep Velvet Purple */
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #650c3b; /* Velvet Red */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: gold;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: gold;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #3d1e70; /* Velvet Blue */
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: gold;
+        }
+
+        button {
+            background-color: #9b1c50; /* Velvet Pink */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d72f7d; /* Lighter Velvet Pink */
+        }
+
+        footer {
+            background-color: #650c3b;
+            color: gold;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Payment Section */
+        #payment button {
+            margin-right: 20px;
+        }
+    </style>
+    <script>
+        function purchaseStory(amount) {
+            console.log("purchaseStory called with amount: " + amount);
+            alert("You have purchased the story for Ksh " + amount);
+        }
+
+        function subscribeMembership(amount) {
+            console.log("subscribeMembership called with amount: " + amount);
+            alert("You have subscribed to the membership for Ksh " + amount + "/month");
+        }
+
+        function payWithMPesa() {
+            console.log("payWithMPesa called");
+            alert("You selected MPesa as your payment method. Proceed with MPesa payment.");
+        }
+
+        function payWithPayPal() {
+            console.log("payWithPayPal called");
+            alert("You selected PayPal as your payment method. Proceed with PayPal payment.");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>VelvetDesires</h1>
+        <nav>
+            <ul>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="stories">
+        <h2>Featured Stories</h2>
+        <div class="story">
+            <h3>Midnight Passion</h3>
+            <p>Teaser of the story...</p>
+            <button class="buy-story" onclick="purchaseStory(200)">Buy for Ksh 200</button>
+        </div>
+    </section>
+    
+    <section id="membership">
+        <h2>Become a Member</h2>
+        <p>Unlock unlimited stories for just Ksh 1000/month.</p>
+        <button class="subscribe" onclick="subscribeMembership(1000)">Subscribe Now</button>
+    </section>
+    
+    <section id="payment">
+        <h2>Payment Options</h2>
+        <p>Select payment method:</p>
+        <button onclick="payWithMPesa()">Pay with MPesa</button>
+        <button onclick="payWithPayPal()">Pay with PayPal</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 VelvetDesires. All rights reserved.</p>
+    </footer>
+</body>
+</html>
